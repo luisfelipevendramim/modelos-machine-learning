@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.kdnuggets.com/wp-content/uploads/tayo_8_best_libraries_machine_learning_explained_1.jpg'); /* Caminho para sua imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Fixar a imagem de fundo */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo da página */
+    align-items: center; /* Centraliza verticalmente o conteúdo da página */
+    height: 100vh; /* Faz com que a altura da página ocupe toda a altura da tela */
+    margin: 0; /* Remove a margem padrão do body */
+}
+
+#main-container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    text-align: center; /* Centraliza o texto e os botões dentro do contêiner */
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    background-color: #007BFF; /* Azul padrão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+button.clicked {
+    background-color: #28A745; /* Verde para o botão clicado */
+}
+
+button.opaco {
+    opacity: 0.5; /* Torna o botão mais opaco */
+    background-color: #007BFF; /* Mantém a cor azul padrão */
+}
+
+button:disabled {
+    cursor: not-allowed; /* Cursor de não permitido para botões desativados */
+}
+
+button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+#question-btn {
+    background-color: #FFD700; /* Cor dourada */
+    color: black; /* Cor do texto em preto para contraste */
+    font-size: 16px; /* Tamanho da fonte igual aos outros botões */
+    width: 200px; /* Largura igual aos outros botões */
+    margin-bottom: 5px; /* Espaço abaixo do botão */
+}
+
+.options-container {
+    margin-top: 20px;
+}
+
+.option {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Adiciona uma classe para tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    max-width: 1200px; /* Ajuste o máximo se necessário */
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Texto cinza escuro */
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px; /* Adiciona mais espaço interno */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posiciona a tooltip acima do botão */
+    left: 50%;
+    margin-left: -100px; /* Centraliza a tooltip em relação ao botão */
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Evita quebra de linha no texto da tooltip */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
